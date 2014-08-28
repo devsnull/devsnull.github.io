@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://devsnull.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: https://www.google.com/search
+url: http://dev.slashnull.io
+title: /dev/null
+subtitle: ~
+author: ~
+simple_search: ~
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -39,6 +39,7 @@ rdiscount:
     - autolink
     - footnotes
     - smart
+
 highlighter: pygments # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
