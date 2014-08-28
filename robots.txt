@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://devsnull.github.io/sitemap.xml 
+Sitemap: http://dev.slashnull.io/sitemap.xml 

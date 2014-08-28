@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://devsnull.github.io/atom.xml" rel="self"/>
-  <link href="http://devsnull.github.io/"/>
-  <updated>2014-08-28T20:44:02+12:00</updated>
-  <id>http://devsnull.github.io/</id>
+  <title><![CDATA[/dev/null]]></title>
+  <link href="http://dev.slashnull.io/atom.xml" rel="self"/>
+  <link href="http://dev.slashnull.io/"/>
+  <updated>2014-08-28T21:19:04+12:00</updated>
+  <id>http://dev.slashnull.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[]]></name>
     
   </author>
 
