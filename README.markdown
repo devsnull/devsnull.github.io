@@ -1,4 +1,36 @@
-## What is Octopress?
+## /dev/null
+
+### Install
+
+```sh
+git clone https://github.com/devsnull/devsnull.github.io
+git checkout source
+bundle
+rake preview # runs preview server
+```
+
+### Write
+
+```sh
+rake new_post['Post title']
+```
+
+### Publish
+
+If you would like your post peer reviewed, then:
+
+```
+git checkout -b post/your-post-title
+git pull-request # If you have hub, otherwise go make a PR
+```
+
+If you just want to publish, or after your pull-request is merged:
+
+```sh
+rake gen_deploy
+```
+
+## Octopress
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 
