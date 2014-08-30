@@ -15,7 +15,23 @@ rake preview # runs preview server
 rake new_post['Post title']
 ```
 
+Add the following property to the top of the blog:
+
+```sh
+---
+...
+author: Your Name
+...
+---
+```
+
 ### Publish
+
+First, you'll need to setup publishing to GH:
+
+```sh
+rake setup_github_pages # Enter `https://github.com/devsnull/devsnull.github.io.git` when prompted.
+```
 
 If you would like your post peer reviewed, then:
 
