@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hardware | /dev/null]]></title>
+  <link href="http://dev.slashnull.io/blog/categories/hardware/atom.xml" rel="self"/>
+  <link href="http://dev.slashnull.io/"/>
+  <updated>2014-08-31T03:20:09+12:00</updated>
+  <id>http://dev.slashnull.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Modding the Happy Hacking Keyboard]]></title>
+    <link href="http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/"/>
+    <updated>2013-09-05T22:45:00+12:00</updated>
+    <id>http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb</id>
+    <content type="html"><![CDATA[<p>After reading <a href="http://grumpylemming.com/blog/2012/12/24/hacking-a-happy-hacking-keyboard/">this post about hacking your HHKB</a>, I set out to do the
+same thing. It&rsquo;s just freaking awesome to have a keyboard with <strong>all your
+favorite keybindings setup in the hardware</strong>. Basically I can now &lsquo;plug and
+go&rsquo; into any computer and it automagically works.</p>
+
+<p>Being able to do this goes beyond the sexy touch and feel of the HHKB. A
+modded board is a entirely new beast, it&rsquo;s keyboard nirvana. No more feeling
+awkward working on other computers! Just bring your extremely portable modded
+keyboard ;)</p>
+
+<p>Originally I was gonna go with a Teensy 2 and try to hack all the hardware
+together, but <a href="http://geekhack.org/index.php?topic=12047.0">after finding this post on Geekhack</a> I decided
+against risking my precious as a guinea pig for my first ever hardware mod,
+instead I purchased a complete board from a guy who goes by <strong>hasu on
+GeekHack</strong>. If you would like a more detailed guide about how to build this
+mod yourself, <a href="http://grumpylemming.com/blog/2012/12/24/hacking-a-happy-hacking-keyboard/">Grumpy Lemming&rsquo;s guide</a> is a really good start.</p>
+
+<p>Installation was surprisingly easy using Hasu&rsquo;s board. Everything was in the right
+place - the board has a hole for the screw in the same spot as the original
+board. He even made use of the dip switch location to expose the bootloader
+reset button!</p>
+
+<p><img src="/images/posts/hhkb-1.jpg" width="600" title="Hasu&rsquo;s Controller Board" ></p>
+
+<p><img src="/images/posts/hhkb-2.jpg" width="600" title="Taking it Apart" ></p>
+
+<p><img src="/images/posts/hhkb-3.jpg" width="600" title="Bootloader Reset Button" ></p>
+
+<p>I want to avoid turning this post into a guide, if you get the completed board
+from Hasu it is extremely straightforward. For complete instructions on how to
+set this up with a Teensy again check out the post above. I want to focus on
+describing how I feel this new board has benefited me as a programmer, and why
+anyone who uses a keyboard with heavily modified bindings should consider
+this.</p>
+
+<p>I&rsquo;m sure that possibilities are limited only to your imagination, but here are
+a few of my favorite tweaks that can be easily programmed with the
+<a href="https://github.com/tmk/tmk_keyboard">tmk_keyboard repo</a>.</p>
+
+<h2>#1 - Dual-purpose modifier keys</h2>
+
+<p>For example, the following makes the left control key act as <code>&lt;ESC&gt;</code> when
+tapped, and <code>&lt;CTRL&gt;</code> when held down.</p>
+
+<pre><code class="cpp">static const uint16_t PROGMEM fn_actions[] = {
+  // LControl with tap Esc*
+  [2] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC)
+};
+</code></pre>
+
+<p>When working in VIM, you no longer have to reach up to the edge of the keyboard
+in order to hit escape, just tap control on your home row :) This may take
+some getting used to but I promise your fingers will thank you for it!</p>
+
+<p>I realize the same thing can be achieved using something like
+<a href="https://pqrs.org/macosx/keyremap4macbook/">KeyRemap4Macbook</a>. But overall the flexibility, portability and
+feel-rightness makes this the superior option!</p>
+
+<h2>#2 - Numpad on the home row</h2>
+
+<p>The HHKB doesn&rsquo;t have a numpad. But the traditional numpad is out of reach and
+disorientatin anyway. With my current setup I have a numpad centered around
+<code>J</code> on my home row. When I hold tab (using the same dual-purpose modifier
+strategy as before), the <em>numpad layer</em> is switched on, it looks like this:</p>
+
+<pre><code>/* Layer 4: Numpad mode
+  * ,-----------------------------------------------------------.
+  * |Esc|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+  * |-----------------------------------------------------------|
+  * |FN0  |  |   |   |   |   | 7 | 8 | 9 | = |   |   |   |Backs|
+  * |-----------------------------------------------------------|
+  * |Contro|   |   |   |   |   | 4 | 5 | 6 | + |   |   |Return  |
+  * |-----------------------------------------------------------|
+  * |Shift   |   |   |   |   |   | 1 | 2 | 3 | - |   |Shift |   |
+  * `-----------------------------------------------------------'
+  *       |Alt|Gui  |           0           |Gui  |Alt|
+  *       `-------------------------------------------'
+  */
+</code></pre>
+
+<p>With this setup, numeric input can finally feel like it&rsquo;s part of the flow!</p>
+
+<h2>#3 - Vi Mode</h2>
+
+<p>Although the HHKB comes with arrow key bindings, it never feels right after
+prolonged use of VIM. My letter <code>f</code> key is now also dual purpose, and when
+held down it activates vi-mode:</p>
+
+<pre><code>/* Layer 2: Vi mode
+  * ,-----------------------------------------------------------.
+  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
+  * |-----------------------------------------------------------|
+  * |Tab  |  |   |   |   |   |   |   |PgU|   |   |   |   |Backs|
+  * |-----------------------------------------------------------|
+  * |Contro|   |   |PgD|FN0|   |Lef|Dow|Up |Rig|   |   |Return  |
+  * |-----------------------------------------------------------|
+  * |Shift   |   |   |   |   |   |   |   |   |   |   |Shift |   |
+  * `-----------------------------------------------------------'
+  *       |Alt|Gui  |         Space         |Gui  |Alt|
+  *       `-------------------------------------------'
+  */
+</code></pre>
+
+<h2>#4 - Mouse Bindings</h2>
+
+<p>Yep, you can control the cursor with your keyboard! This is just a
+cool-showy-off thing but there have been some cases where this may be useful.
+Again, this time I made the escape button on the top left dual purpose - press
+for <code>&lt;esc&gt;</code>, hold for mouse mouse. In mouse mode <code>hjkl</code> control movement, and
+the space bar is left click. Like so:</p>
+
+<pre><code>/* Layer 3: Mouse mode
+  * ,-----------------------------------------------------------.
+  * |FN0| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
+  * |-----------------------------------------------------------|
+  * |Tab  |   |   |   |   |   |MwL|MwD|MwU|MwR|   |   |   |Backs|
+  * |-----------------------------------------------------------|
+  * |Contro|   |   |   |   |   |McL|McD|McU|McR|   |   |Return  |
+  * |-----------------------------------------------------------|
+  * |Shift   |   |   |   |   |Mb3|Mb2|Mb1|Mb4|Mb5|   |Shift |   |
+  * `-----------------------------------------------------------'
+  *      |Alt |Gui  |          Mb1          |Gui  |Alt|
+  *      `--------------------------------------------'
+  * Mc: Mouse Cursor / Mb: Mouse Button / Mw: Mouse Wheel 
+  */
+</code></pre>
+
+<p>There must be plenty of other tweaks and hacks that I haven&rsquo;t thought of.
+I&rsquo;m still continuously tweaking the key mappings in search of that holy grail of
+key-bindings - it&rsquo;s been such an enjoyable experience.</p>
+
+<h3>Updates</h3>
+
+<p>Here are some other tweaks that I&rsquo;ve adopted so far:</p>
+
+<ul>
+<li><p><code>LSFT</code> becomes left parenthesis on tap, <code>RSFT</code> is right
+parenthesis. This one actually came with the <code>tmk_keyboard</code> repo as an
+existing macro, since there is no real key code to send for the parenthesis&#8217;.</p></li>
+<li><p>Remap <code>esc</code> to <code>tilde</code>, I still can&rsquo;t get used to the replaced tilde
+for escape next to the <code>1</code> key, since I&rsquo;ve got tap <code>LCTL</code> for escape now, no
+longer need the original one.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

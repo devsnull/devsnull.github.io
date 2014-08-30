@@ -2,24 +2,30 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   
+  <url>
+    <loc>http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/</loc>
+    <lastmod>2013-09-05T22:45:00+12:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
   
   <url>
     <loc>http://dev.slashnull.io/blog/archives/</loc>
-    <lastmod>2014-08-28T21:49:04+12:00</lastmod>
+    <lastmod>2014-08-31T03:20:09+12:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://dev.slashnull.io/blog/</loc>
-    <lastmod>2014-08-28T21:49:04+12:00</lastmod>
+    <lastmod>2014-08-31T03:20:09+12:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://dev.slashnull.io/</loc>
-    <lastmod>2014-08-28T21:49:04+12:00</lastmod>
+    <lastmod>2014-08-31T03:20:09+12:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

@@ -1,23 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[/dev/null]]></title>
-  <link href="http://dev.slashnull.io/atom.xml" rel="self"/>
-  <link href="http://dev.slashnull.io/"/>
-  <updated>2014-08-31T03:20:09+12:00</updated>
-  <id>http://dev.slashnull.io/</id>
-  <author>
-    <name><![CDATA[]]></name>
-    
-  </author>
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<title>Modding the Happy Hacking Keyboard  | /dev/null</title>
+
+	<meta name="author" content="/dev/null">
+
+<meta name="description" content="After reading this post about hacking your HHKB, I set out to do the
+same thing. It&rsquo;s just freaking awesome to have a keyboard with all your &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="/dev/null" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">/dev/null</a></h1>
+<span class="tagline"></span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Modding the Happy Hacking Keyboard</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
 
   
-  <entry>
-    <title type="html"><![CDATA[Modding the Happy Hacking Keyboard]]></title>
-    <link href="http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/"/>
-    <updated>2013-09-05T22:45:00+12:00</updated>
-    <id>http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb</id>
-    <content type="html"><![CDATA[<p>After reading <a href="http://grumpylemming.com/blog/2012/12/24/hacking-a-happy-hacking-keyboard/">this post about hacking your HHKB</a>, I set out to do the
+
+
+<time datetime="2013-09-05T22:45:00+12:00" pubdate data-updated="true"></time></div>
+	</header>
+	<div class="entry-content"><p>After reading <a href="http://grumpylemming.com/blog/2012/12/24/hacking-a-happy-hacking-keyboard/">this post about hacking your HHKB</a>, I set out to do the
 same thing. It&rsquo;s just freaking awesome to have a keyboard with <strong>all your
 favorite keybindings setup in the hardware</strong>. Basically I can now &lsquo;plug and
 go&rsquo; into any computer and it automagically works.</p>
@@ -39,11 +87,11 @@ place - the board has a hole for the screw in the same spot as the original
 board. He even made use of the dip switch location to expose the bootloader
 reset button!</p>
 
-<p><img src="http://dev.slashnull.io/images/posts/hhkb-1.jpg" width="600" title="Hasu's Controller Board" ></p>
+<p><img src="/images/posts/hhkb-1.jpg" width="600" title="Hasu's Controller Board" ></p>
 
-<p><img src="http://dev.slashnull.io/images/posts/hhkb-2.jpg" width="600" title="Taking it Apart" ></p>
+<p><img src="/images/posts/hhkb-2.jpg" width="600" title="Taking it Apart" ></p>
 
-<p><img src="http://dev.slashnull.io/images/posts/hhkb-3.jpg" width="600" title="Bootloader Reset Button" ></p>
+<p><img src="/images/posts/hhkb-3.jpg" width="600" title="Bootloader Reset Button" ></p>
 
 <p>I want to avoid turning this post into a guide, if you get the completed board
 from Hasu it is extremely straightforward. For complete instructions on how to
@@ -61,7 +109,7 @@ a few of my favorite tweaks that can be easily programmed with the
 <p>For example, the following makes the left control key act as <code>&lt;ESC&gt;</code> when
 tapped, and <code>&lt;CTRL&gt;</code> when held down.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -69,7 +117,7 @@ tapped, and <code>&lt;CTRL&gt;</code> when held down.</p>
 </span><span class='line'>  <span class="c1">// LControl with tap Esc*</span>
 </span><span class='line'>  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">ACTION_MODS_TAP_KEY</span><span class="p">(</span><span class="n">MOD_LCTL</span><span class="p">,</span> <span class="n">KC_ESC</span><span class="p">)</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>When working in VIM, you no longer have to reach up to the edge of the keyboard
@@ -87,7 +135,7 @@ disorientatin anyway. With my current setup I have a numpad centered around
 <code>J</code> on my home row. When I hold tab (using the same dual-purpose modifier
 strategy as before), the <em>numpad layer</em> is switched on, it looks like this:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -113,7 +161,7 @@ strategy as before), the <em>numpad layer</em> is switched on, it looks like thi
 </span><span class='line'><span class="cm">  *       |Alt|Gui  |           0           |Gui  |Alt|</span>
 </span><span class='line'><span class="cm">  *       `-------------------------------------------&#39;</span>
 </span><span class='line'><span class="cm">  */</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>With this setup, numeric input can finally feel like it&rsquo;s part of the flow!</p>
@@ -124,7 +172,7 @@ strategy as before), the <em>numpad layer</em> is switched on, it looks like thi
 prolonged use of VIM. My letter <code>f</code> key is now also dual purpose, and when
 held down it activates vi-mode:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -150,7 +198,7 @@ held down it activates vi-mode:</p>
 </span><span class='line'><span class="cm">  *       |Alt|Gui  |         Space         |Gui  |Alt|</span>
 </span><span class='line'><span class="cm">  *       `-------------------------------------------&#39;</span>
 </span><span class='line'><span class="cm">  */</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <h2>#4 - Mouse Bindings</h2>
@@ -161,7 +209,7 @@ Again, this time I made the escape button on the top left dual purpose - press
 for <code>&lt;esc&gt;</code>, hold for mouse mouse. In mouse mode <code>hjkl</code> control movement, and
 the space bar is left click. Like so:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -189,7 +237,7 @@ the space bar is left click. Like so:</p>
 </span><span class='line'><span class="cm">  *      `--------------------------------------------&#39;</span>
 </span><span class='line'><span class="cm">  * Mc: Mouse Cursor / Mb: Mouse Button / Mw: Mouse Wheel </span>
 </span><span class='line'><span class="cm">  */</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>There must be plenty of other tweaks and hacks that I haven&rsquo;t thought of.
@@ -203,13 +251,100 @@ key-bindings - it&rsquo;s been such an enjoyable experience.</p>
 <ul>
 <li><p><code>LSFT</code> becomes left parenthesis on tap, <code>RSFT</code> is right
 parenthesis. This one actually came with the <code>tmk_keyboard</code> repo as an
-existing macro, since there is no real key code to send for the parenthesis&#8217;.</p></li>
+existing macro, since there is no real key code to send for the parenthesis'.</p></li>
 <li><p>Remap <code>esc</code> to <code>tilde</code>, I still can&rsquo;t get used to the replaced tilde
 for escape next to the <code>1</code> key, since I&rsquo;ve got tap <code>LCTL</code> for escape now, no
 longer need the original one.</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-</feed>
+</div>
+
+</article>
+
+	
+	<div class="share">
+	  <!-- <ul> -->
+	  <!--   <li>
+  <a href="https://twitter.com/intent/tweet?text=Modding the Happy Hacking Keyboard by @&url=http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/" title="Share Modding the Happy Hacking Keyboard on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+ -->
+	  <!--   <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/" title="Share Modding the Happy Hacking Keyboard on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+ -->
+	  <!--   <li>
+  <a href="https://plus.google.com/share?url=http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/" title="Share Modding the Happy Hacking Keyboard on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+ -->
+	  <!-- </ul> -->
+	</div>
+
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2014
+
+    /dev/null
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'devsnull';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/';
+        var disqus_url = 'http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-54317261-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>
