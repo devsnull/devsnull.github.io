@@ -1,9 +1,0 @@
----
-layout: post
-title: "Testing"
-date: 2014-08-30 15:15:37 +1200
-comments: true
-categories: 
----
-
-Test test test.... lalalala
