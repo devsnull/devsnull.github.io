@@ -17,6 +17,12 @@ rake new_post['Post title']
 
 ### Publish
 
+First, you'll need to setup publishing to GH:
+
+```sh
+rake setup_github_pages # Enter `https://github.com/devsnull/devsnull.github.io.git` when prompted.
+```
+
 If you would like your post peer reviewed, then:
 
 ```
