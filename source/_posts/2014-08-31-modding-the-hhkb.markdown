@@ -3,7 +3,7 @@ layout: post
 title: "Modding the Happy Hacking Keyboard"
 date: 2013-09-05 22:45
 comments: true
-categories: keyboard
+categories: keyboard hhkb hardware
 author: Nathan Kot
 ---
 
