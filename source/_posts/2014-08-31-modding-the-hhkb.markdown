@@ -8,9 +8,9 @@ author: Nathan Kot
 ---
 
 After reading [this post about hacking your HHKB][grumpy], I set out to do the
-same thing. With the finished product, it is freaking awesome to have a
-keyboard with **all your favorite keybindings set in the hardware**. Basically
-I can now 'plug and go' into any computer and _it just works_.
+same thing. It's just freaking awesome to have a keyboard with **all your
+favorite keybindings setup in the hardware**. Basically I can now 'plug and
+go' into any computer and it automagically works.
 
 Being able to do this goes beyond the sexy touch and feel of the HHKB. A
 modded board is a entirely new beast, it's keyboard nirvana. No more feeling
