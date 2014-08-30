@@ -15,6 +15,16 @@ rake preview # runs preview server
 rake new_post['Post title']
 ```
 
+Add the following property to the top of the blog:
+
+```sh
+---
+...
+author: Your Name
+...
+---
+```
+
 ### Publish
 
 First, you'll need to setup publishing to GH:
