@@ -117,6 +117,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "published: false"
     post.puts "author: Your name here"
+    post.puts "author_email: yougravatar@email.com"
     post.puts "---"
   end
 end
