@@ -118,6 +118,7 @@ task :new_post, :title do |t, args|
     post.puts "published: false"
     post.puts "author: Your name here"
     post.puts "author_email: yougravatar@email.com"
+    post.puts "anonymous: true # All posts are anonymous regardless of this setting for now."
     post.puts "---"
   end
 end
