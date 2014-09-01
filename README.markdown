@@ -3,7 +3,8 @@
 ### Install
 
 ```sh
-git clone https://github.com/devsnull/devsnull.github.io
+git clone https://github.com/devsnull/devsnull.github.io devsnull
+cd devsnull
 git checkout source
 bundle
 rake preview # runs preview server
