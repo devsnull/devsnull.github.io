@@ -4,13 +4,69 @@
   <title><![CDATA[/dev/null]]></title>
   <link href="http://dev.slashnull.io/atom.xml" rel="self"/>
   <link href="http://dev.slashnull.io/"/>
-  <updated>2014-08-31T12:26:47+12:00</updated>
+  <updated>2014-10-18T11:20:53+13:00</updated>
   <id>http://dev.slashnull.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Google adwords - primer.]]></title>
+    <link href="http://dev.slashnull.io/blog/2014/08/31/google-adwords-primer/"/>
+    <updated>2014-08-31T12:33:12+12:00</updated>
+    <id>http://dev.slashnull.io/blog/2014/08/31/google-adwords-primer</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been failing at adwords recently. So I approached Karl who runs <a href="http://www.onlineexpression.co.nz/">Online
+Expression</a> and after a quick sit-down these are the
+mind-blowing tips he revealed.</p>
+
+<h3>Search Network only - All features</h3>
+
+<p>Under <code>Campaign &gt; Settings</code> make sure that <code>All features</code> is selected. I had
+it set to <code>Standard</code> which meant that a lot of the goodies below never showed
+up.</p>
+
+<p><img src="http://dev.slashnull.io/images/posts/google-adwords-1.png" title="Enabling all features" ></p>
+
+<h3>Ad Rotation</h3>
+
+<p>If you&rsquo;re starting out, you&rsquo;ll want to have a fair gauge of how well each
+individual ad is doing. Problem is Google will give ads that it thinks will
+work well a higher weighting. Under <code>Campaign &gt; Settings &gt; Advanced Settings</code>
+choose <code>Rotate evenly: Show ads more evenly for at least 90 days, then
+optimise</code>.</p>
+
+<p><img src="http://dev.slashnull.io/images/posts/google-adwords-2.png" title="Ad Rotation" ></p>
+
+<h3>Search terms report</h3>
+
+<p>This is not easy to find. Go to <code>Campaign &gt; Keywords &gt; Details &gt; Search Terms</code>
+to get a list of <em>actual terms</em> people used that triggered your ads.</p>
+
+<p><img src="http://dev.slashnull.io/images/posts/google-adwords-3.png" title="Search Terms" ></p>
+
+<h3>Quality score</h3>
+
+<p>Quality score columns are hidden by default. Use <code>Campaign &gt; Keywords &gt;
+Columns &gt; Customize Columns</code> to enable them. Although a quality score of 4/10
+still shows as &lsquo;in the green&rsquo; in adwords, I&rsquo;ve been told that we need to
+strive for a minimum of 7/10.</p>
+
+<p><img src="http://dev.slashnull.io/images/posts/google-adwords-4.png" title="Columns" ></p>
+
+<p>An effective way to increase your quality score for your ads, is to make sure
+that the ad includes keywords that it&rsquo;s targeting in it&rsquo;s ad text. This
+<em>excludes</em> synonyms. This may seem obvious, but if your keyword was <code>wedding
+registry</code>, and you had <code>bridal registry</code> in your ad, it is <em>not</em> considered
+relevant adtext.</p>
+
+<h3>Any more?</h3>
+
+<p>Know other obscure things that an adwords user needs to know? Use the comments
+below :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Modding the Happy Hacking Keyboard]]></title>

@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://dev.slashnull.io/blog/2014/08/31/google-adwords-primer/</loc>
+    <lastmod>2014-08-31T12:33:12+12:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://dev.slashnull.io/blog/2013/09/05/modding-the-hhkb/</loc>
     <lastmod>2013-09-05T22:45:00+12:00</lastmod>
     <priority>0.8</priority>
@@ -11,21 +17,21 @@
   
   <url>
     <loc>http://dev.slashnull.io/blog/archives/</loc>
-    <lastmod>2014-08-31T12:26:47+12:00</lastmod>
+    <lastmod>2014-10-18T11:20:53+13:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://dev.slashnull.io/blog/</loc>
-    <lastmod>2014-08-31T12:26:47+12:00</lastmod>
+    <lastmod>2014-10-18T11:20:53+13:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://dev.slashnull.io/</loc>
-    <lastmod>2014-08-31T12:26:47+12:00</lastmod>
+    <lastmod>2014-10-18T11:20:53+13:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
